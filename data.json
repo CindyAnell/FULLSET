@@ -4,21 +4,21 @@
     "name": "Aqua",
     "shape": "coffin",
     "price": 20,
-    "image": "Images/Presson-Nails/aqua.png"
+    "image": "FullSet_Nail_Site/Images/Presson-Nails/aqua.png"
   },
   {
     "id": 2,
     "name": "Basic Belle",
     "shape": "coffin",
     "price": 18,
-    "image": "Images/Presson-Nails/basic-belle.png"
+    "image": "FullSet_Nail_Site/Images/Presson-Nails/basic-belle.png"
   },
   {
     "id": 3,
     "name": "Blue Bling",
     "shape": "stiletto",
     "price": 25,
-    "image": "Images/Presson-Nails/blue-bling.png",
+    "image": "FullSet_Nail_Site/Images/Presson-Nails/blue-bling.png",
     "featured": true
   },
   {
@@ -26,28 +26,28 @@
     "name": "Blue Sky",
     "shape": "square",
     "price": 21,
-    "image": "Images/Presson-Nails/blue-sky.png"
+    "image": "FullSet_Nail_Site/Images/Presson-Nails/blue-sky.png"
   },
   {
     "id": 5,
     "name": "Blush",
     "shape": "almond",
     "price": 19,
-    "image": "Images/Presson-Nails/blush.png"
+    "image": "FullSet_Nail_Site/Images/Presson-Nails/blush.png"
   },
   {
     "id": 6,
     "name": "Buttercream",
     "shape": "square",
     "price": 22,
-    "image": "Images/Presson-Nails/buttercream.png"
+    "image": "FullSet_Nail_Site/Images/Presson-Nails/buttercream.png"
   },
   {
     "id": 7,
     "name": "Cinderella",
     "shape": "almond",
     "price": 25,
-    "image": "Images/Presson-Nails/cinderella.png",
+    "image": "FullSet_Nail_Site/Images/Presson-Nails/cinderella.png",
     "featured": true
   },
   {
@@ -55,7 +55,7 @@
     "name": "Classy Girl",
     "shape": "almond",
     "price": 24,
-    "image": "Images/Presson-Nails/classy-girl.png",
+    "image": "FullSet_Nail_Site/Images/Presson-Nails/classy-girl.png",
     "featured": true
   },
   {
@@ -63,7 +63,7 @@
     "name": "Diamond Tipz",
     "shape": "stiletto",
     "price": 25,
-    "image": "Images/Presson-Nails/diamond-tipz.png",
+    "image": "FullSet_Nail_Site/Images/Presson-Nails/diamond-tipz.png",
     "featured": true
   },
   {
@@ -71,14 +71,14 @@
     "name": "Gemz",
     "shape": "square",
     "price": 21,
-    "image": "Images/Presson-Nails/gemz.png"
+    "image": "FullSet_Nail_Site/Images/Presson-Nails/gemz.png"
   },
   {
     "id": 11,
     "name": "Kat Klawz",
     "shape": "stiletto",
     "price": 25,
-    "image": "Images/Presson-Nails/kat-klawz.png",
+    "image": "FullSet_Nail_Site/Images/Presson-Nails/kat-klawz.png",
     "featured": true
   },
   {
@@ -86,21 +86,21 @@
     "name": "Lilac Dreamz",
     "shape": "coffin",
     "price": 20,
-    "image": "Images/Presson-Nails/lilac-dreamz.png"
+    "image": "FullSet_Nail_Site/Images/Presson-Nails/lilac-dreamz.png"
   },
   {
     "id": 13,
     "name": "Pink Pumpz",
     "shape": "stiletto",
     "price": 23,
-    "image": "Images/Presson-Nails/pink-pumpz.png"
+    "image": "FullSet_Nail_Site/Images/Presson-Nails/pink-pumpz.png"
   },
   {
     "id": 14,
     "name": "Pretty in Pink",
     "shape": "almond",
     "price": 25,
-    "image": "Images/Presson-Nails/pretty-in-pink.png",
+    "image": "FullSet_Nail_Site/Images/Presson-Nails/pretty-in-pink.png",
     "featured": true
   },
   {
@@ -108,7 +108,7 @@
     "name": "Sunset",
     "shape": "coffin",
     "price": 24,
-    "image": "Images/Presson-Nails/sunset.png",
+    "image": "FullSet_Nail_Site/Images/Presson-Nails/sunset.png",
     "featured": true
   },
   {
@@ -116,7 +116,7 @@
     "name": "Y2K",
     "shape": "square",
     "price": 25,
-    "image": "Images/Presson-Nails/y2k.png",
+    "image": "FullSet_Nail_Site/Images/Presson-Nails/y2k.png",
     "featured": true
   }
 ]

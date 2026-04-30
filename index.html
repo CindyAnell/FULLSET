@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="lightbox-carousel-grid-vns/dist/vns-gallery.min.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ysp3flb.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ysp3flb.css">
+
+    <!-- JS with defer -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" defer></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js" defer></script>
+    <script src="lightbox-carousel-grid-vns/dist/vns-gallery.min.js" defer></script>
+    <script src="script.js" defer></script>
+
+    
+</head>
+
+<body>
+
+<header>
+  <h1>FullSet</h1>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="#" aria-label="Cart">
+          <!-- cart svg here -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+            <path d="M5.33331 6H19.8672C20.4687 6 20.9341 6.52718 20.8595 7.12403L20.1095 13.124C20.0469 13.6245 19.6215 14 19.1172 14H16.5555H9.44442H7.99998" stroke="#fff9ee" stroke-linejoin="round"/>
+            <path d="M2 4H4.23362C4.68578 4 5.08169 4.30341 5.19924 4.74003L8.30076 16.26C8.41831 16.6966 8.81422 17 9.26638 17H19" stroke="#fff9ee" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="10" cy="20" r="1" stroke="#fff9ee"/>
+            <circle cx="17.5" cy="20" r="1" stroke="#fff9ee"/>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" aria-label="Favorites">
+          <!-- heart svg here -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+            <path d="M21 8.99998C21 12.7539 15.7156 17.9757 12.5857 20.5327C12.2416 20.8137 11.7516 20.8225 11.399 20.5523C8.26723 18.1523 3 13.1225 3 8.99998C3 2.00001 12 2.00002 12 8C12 2.00001 21 1.99999 21 8.99998Z" stroke="#fff9ee" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <a href="#" id="accountIcon" aria-label="Account">
+          <!-- simple profile svg -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="8" r="4" stroke="#fff9ee"/>
+            <path d="M4 21C4 17 7.5 14 12 14C16.5 14 20 17 20 21" stroke="#fff9ee" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<!-- account popup-->
+<div id="accountPopup" class="popup-overlay">
+  <div class="popup-box">
+    <button id="closePopup" class="close-btn">&times;</button>
+
+    <h2>Create Account</h2>
+
+    <form id="accountForm">
+      <label for="userName">Name</label>
+      <input type="text" id="userName" required>
+
+      <label for="userEmail">Email</label>
+      <input type="email" id="userEmail" required>
+
+      <button type="submit" id="saveAccount">Save Account</button>
+    </form>
+
+    <p id="accountMessage"></p>
+  </div>
+</div>
+
+
+  <!--hero and featured section-->
+
+<main>
+    <section id="hero">
+        <div class="hero-banner">
+            <h2>The Perfect Set</h2>
+            <p>Salon-quality press-ons designed for effortless, everyday wear. 
+            Thoughtfully made to fit your style whether that’s soft, bold, or somewhere in between.</p>
+            
+        </div>
+
+        <button>Shop</button>
+    </section>
+
+    <section class="featured">
+
+    <h2>Featured</h2>
+
+            <div class="gallery">
+                
+                <img src="Images/Presson-Nails/classy-girl.png" alt="">
+                <!-- Image 2 -->
+                <img src="Images/Presson-Nails/diamond-tipz.png" alt="">
+                <!-- Image 3 -->
+                <img src="Images/Presson-Nails/sunset.png" alt="">
+                    
+                <img src="Images/Presson-Nails/y2k.png" alt="">
+                <!-- Image 2 -->
+                <img src="Images/Presson-Nails/cinderella.png" alt="">
+                <!-- Image 3 -->
+                <img src="Images/Presson-Nails/pretty-in-pink.png" alt="">
+
+                <img src="Images/Presson-Nails/blue-bling.png" alt="">
+
+                <img src="Images/Presson-Nails/kat-klawz.png" alt="">
+                
+            </div>
+        
+            
+    </section>
+
+
+  <!--product gallery-->
+    <section id="products">
+        <h2>Products</h2>
+
+        
+
+        <select id="filter">
+            <option value="all">Display All Nail Sets</option>
+            <option value="almond">Almond</option>
+            <option value="square">Square</option>
+            <option value="coffin">Coffin</option>
+            <option value="stiletto">Stiletto</option>
+        </select>
+
+        <div id="productGallery"></div>
+</section>
+
+<!--faq-->
+
+    <section id="faq">
+        <h2>FAQ</h2>
+        <div id="accordion">
+    <h3>Shipping & Handling</h3>
+        <div>
+            <p><b>How long will it take to receive my order?</b>
+                All sets are handmade to order. Processing typically takes 2–5 business days, followed by 3–5 business days for standard shipping within the U.S. You’ll receive a tracking number as soon as your order ships. </p>
+
+            <p><b>
+                Do you ship internationally?</b>
+                We currently ship within the U.S., but international shipping is coming soon. Stay tuned!
+            </p>
+
+            <p><b>
+                What if my package is delayed or lost?</b>
+                Once your order has shipped, it is in the hands of the carrier. If your package is delayed, please check your tracking first. For lost packages, contact us and we’ll help you file a claim or find a solution.
+        </p>
+        </div>
+        <h3>Sizing</h3>
+        <div>
+            <p><b>How do I find my nail size?</b>
+                You can measure your nails using a soft measuring tape or the tape method (placing tape across your nail and measuring it). Match your measurements to our sizing chart to find your best fit.</p>
+
+                <p><b> What if I’m between sizes?</b>
+                If you’re in between sizes, we recommend sizing up and gently filing the sides of the nail for a perfect fit.</p>
+                <p><b>
+                Do you offer custom sizing?</b>
+                Yes! You can select custom sizing and enter your measurements at checkout for a more tailored fit.
+        </p>
+        </div>
+        <h3>Application</h3>
+        <div>
+            <p><b>How do I apply press-on nails?</b></p>
+                <ol>
+                    <li><p>Prep your nails by pushing back cuticles and lightly buffing the surface</p></li>
+                    <li><P>Clean nails with alcohol or prep pad</P></li>
+                    <li><p>Apply adhesive (glue or tabs)</p></li>
+                    <li><p>Press and hold each nail for 20–30 seconds</p></li>
+            
+             </ol>
+
+                <p><b>
+                How long do they last?</b>
+                With nail glue, your set can last 1–2 weeks. With adhesive tabs, wear typically lasts 1–3 days, making them perfect for short-term looks.
+  `           </p>
+              <p><b>
+                Can I reuse my press-on nails?</b>
+                Yes! When applied with adhesive tabs and removed carefully, your nails can be reused multiple times.
+              </p>
+              <p><b>
+                How do I remove them safely?</b>
+                Soak your nails in warm, soapy water or oil for 10–15 minutes, then gently lift from the sides. Never force removal, as this can damage your natural nails.
+              </p>
+            
+        </div>
+        </div>
+
+
+    </section>
+
+</main>
+
+<!--contact and socials-->
+
+<footer>
+
+    <h2>Contact Us</h2>
+    <section id="contact">
+    <h3>Talk to Us!</h3>
+    
+        <form>
+        <label for="myName">Full Name<span class="required">*</span></label>
+        <input type="text" id="myName" name="myName" autocomplete="name" required>
+
+        <label for="myEmail">Email<span class="required">*</span></label>
+        <input type="email" id="myEmail" name="myEmail" autocomplete="email" required>
+
+        <label for="myPhone">Phone<span class="required">*</span></label>
+        <input type="tel" id="myPhone" name="myPhone" autocomplete="tel" required>
+        
+        <fieldset>
+            <legend>Preferred Contact method<span class="required">*</span></legend>
+            <input type="radio" name="contactPref" id="prefPhone" required>
+            <label for="prefPhone">Phone</label>
+            <input type="radio" name="contactPref" id="prefEmail" required>
+            <label for="prefEmail">Email</label>
+        </fieldset>
+        
+        <label for="message">Message<span class="required">*</span></label>
+        <textarea name= "message" id="message" required></textarea>
+        <input type="submit" name="mySubmit" id="mySubmit">
+        
+    </form>
+    
+    </section>
+
+    <section id="social">
+  <h3>Social Media</h3>
+
+  <div class="social-links">
+    <a href="https://www.instagram.com/" aria-label="Instagram">
+      <!-- Instagram -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <path d="M10.202,2.098c-1.49,.07-2.507,.308-3.396,.657-.92,.359-1.7,.84-2.477,1.619-.776,.779-1.254,1.56-1.61,2.481-.345,.891-.578,1.909-.644,3.4-.066,1.49-.08,1.97-.073,5.771s.024,4.278,.096,5.772c.071,1.489,.308,2.506,.657,3.396,.359,.92,.84,1.7,1.619,2.477,.779,.776,1.559,1.253,2.483,1.61,.89,.344,1.909,.579,3.399,.644,1.49,.065,1.97,.08,5.771,.073,3.801-.007,4.279-.024,5.773-.095s2.505-.309,3.395-.657c.92-.36,1.701-.84,2.477-1.62s1.254-1.561,1.609-2.483c.345-.89,.579-1.909,.644-3.398,.065-1.494,.081-1.971,.073-5.773s-.024-4.278-.095-5.771-.308-2.507-.657-3.397c-.36-.92-.84-1.7-1.619-2.477s-1.561-1.254-2.483-1.609c-.891-.345-1.909-.58-3.399-.644s-1.97-.081-5.772-.074-4.278,.024-5.771,.096m.164,25.309c-1.365-.059-2.106-.286-2.6-.476-.654-.252-1.12-.557-1.612-1.044s-.795-.955-1.05-1.608c-.192-.494-.423-1.234-.487-2.599-.069-1.475-.084-1.918-.092-5.656s.006-4.18,.071-5.656c.058-1.364,.286-2.106,.476-2.6,.252-.655,.556-1.12,1.044-1.612s.955-.795,1.608-1.05c.493-.193,1.234-.422,2.598-.487,1.476-.07,1.919-.084,5.656-.092,3.737-.008,4.181,.006,5.658,.071,1.364,.059,2.106,.285,2.599,.476,.654,.252,1.12,.555,1.612,1.044s.795,.954,1.051,1.609c.193,.492,.422,1.232,.486,2.597,.07,1.476,.086,1.919,.093,5.656,.007,3.737-.006,4.181-.071,5.656-.06,1.365-.286,2.106-.476,2.601-.252,.654-.556,1.12-1.045,1.612s-.955,.795-1.608,1.05c-.493,.192-1.234,.422-2.597,.487-1.476,.069-1.919,.084-5.657,.092s-4.18-.007-5.656-.071M21.779,8.517c.002,.928,.755,1.679,1.683,1.677s1.679-.755,1.677-1.683c-.002-.928-.755-1.679-1.683-1.677,0,0,0,0,0,0-.928,.002-1.678,.755-1.677,1.683m-12.967,7.496c.008,3.97,3.232,7.182,7.202,7.174s7.183-3.232,7.176-7.202c-.008-3.97-3.233-7.183-7.203-7.175s-7.182,3.233-7.174,7.203m2.522-.005c-.005-2.577,2.08-4.671,4.658-4.676,2.577-.005,4.671,2.08,4.676,4.658,.005,2.577-2.08,4.671-4.658,4.676-2.577,.005-4.671-2.079-4.676-4.656h0"></path>
+            </svg>
+    </a>
+
+    <a href="https://www.facebook.com/" aria-label="Facebook">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <path d="M16,2c-7.732,0-14,6.268-14,14,0,6.566,4.52,12.075,10.618,13.588v-9.31h-2.887v-4.278h2.887v-1.843c0-4.765,2.156-6.974,6.835-6.974,.887,0,2.417,.174,3.043,.348v3.878c-.33-.035-.904-.052-1.617-.052-2.296,0-3.183,.87-3.183,3.13v1.513h4.573l-.786,4.278h-3.787v9.619c6.932-.837,12.304-6.74,12.304-13.897,0-7.732-6.268-14-14-14Z"></path>
+            </svg>
+    </a>
+
+    <a href="https://x.com/" aria-label="twitter">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <path d="M18.42,14.009L27.891,3h-2.244l-8.224,9.559L10.855,3H3.28l9.932,14.455L3.28,29h2.244l8.684-10.095,6.936,10.095h7.576l-10.301-14.991h0Zm-3.074,3.573l-1.006-1.439L6.333,4.69h3.447l6.462,9.243,1.006,1.439,8.4,12.015h-3.447l-6.854-9.804h0Z"></path>
+            </svg>
+    </a>
+  </div>
+</section>
+
+
+
+</footer>
+
+
+</body>
+</html>   
